@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EBF4FA; /* A very soft, slight icy blue */
+    color: #5D4037; /* Warm, rich brown */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px; /* Softer, rounder edges */
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.1); /* A soft brown shadow */
+    width: 420px;
+    text-align: center;
+}
+
+/* Timer Styles */
+.time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+#time-display {
+    font-size: 5.5rem;
+    font-weight: 800;
+    color: #5D4037; /* Changed to match the brown text */
+}
+
+/* --- THE HOOKY BUTTONS --- */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* Modern Pill Shape */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase; /* Makes the letters ALL CAPS */
+    letter-spacing: 1px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* 3D Shadow */
+    transition: all 0.2s ease; /* Makes hover animations smooth */
+}
+
+/* Specific colors for each button so they pop! */
+#start-btn { background-color: #2ecc71; } /* Bright Green */
+#pause-btn { background-color: #f39c12; } /* Warm Orange */
+#reset-btn { background-color: #e74c3c; } /* Sharp Red */
+
+/* Hover Effect: They lift up and shadow gets bigger */
+.buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Click Effect: They press down into the page */
+.buttons button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* Task Styles */
+.task-section {
+    margin-top: 2.5rem;
+    border-top: 2px solid #EBF4FA;
+    padding-top: 1.5rem;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #EBF4FA;
+    border-radius: 8px;
+    color: #5D4037;
+    font-size: 1rem;
+    outline: none;
+}
+
+#task-input:focus {
+    border-color: #5D4037; /* Highlights brown when typing */
+}
+
+#add-btn {
+    padding: 10px 20px;
+    background-color: #5D4037; /* Brown button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#add-btn:hover {
+    background-color: #4a332c;
+}
+
+#task-list {
+    margin-top: 1.5rem;
+    list-style-type: none;
+    text-align: left;
+}
+/* --- DAY 5: TASK LIST ENHANCEMENTS --- */
+.task-item {
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #EBF4FA;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex; /* Puts text and button side-by-side */
+    justify-content: space-between; /* Pushes text to the left, button to the right */
+    align-items: center;
+}
+
+/* This is the class we will add using JavaScript when a task is clicked! */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5; /* Makes it fade out slightly */
+}
+
+/* The small red Delete button */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Make the text part clickable (shows a pointer finger) */
+.task-text {
+    cursor: pointer;
+    flex-grow: 1; /* Makes the clickable area take up all the extra space */
+}

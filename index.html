@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro & Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+        <!-- Catchier Title and Subtitle -->
+        <h1>Master Your Time 🚀</h1>
+        <p>Crush your goals with 25-minute deep focus sessions. What will you achieve today?</p>
+    </header>
+
+    <main>
+        <!-- THE TIMER -->
+        <section class="timer-section">
+            
+            <!-- We wrap the clock and time in a container to put them side-by-side -->
+            <div class="time-container">
+     <!-- Look for stroke="#5D4037" inside this tag -->
+<!-- Look for stroke="#5D4037" inside this tag -->
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#5D4037" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <h2 id="time-display">25:00</h2>
+            </div>
+            
+            <div class="buttons">
+                <button id="start-btn">Start</button>
+                <button id="pause-btn">Pause</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </section>
+
+        <!-- THE TASK LIST -->
+        <section class="task-section">
+            <div class="input-area">
+                <input type="text" id="task-input" placeholder="What are you working on?">
+                <button id="add-btn">Add</button>
+            </div>
+            
+            <!-- This is where JS will put the tasks later -->
+            <ul id="task-list"></ul> 
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
